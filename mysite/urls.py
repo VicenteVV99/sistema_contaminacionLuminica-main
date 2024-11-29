@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
     # path('mediciones/', include('historialMediciones.urls')),
     path('', include('fiscalizacion.urls')),
@@ -13,6 +14,7 @@ urlpatterns = [
     path('', include('proyectosApi.urls')),
     path('', include('fiscalizacionApi.urls')),
     path('', include('medicionesApi.urls')),
+    path('usuarios/', include('usuarios.urls')),  # Incluye las URLs de usuarios
 ]
 
 if settings.DEBUG:
